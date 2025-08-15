@@ -3,8 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <link rel="stylesheet" href="style.css">
   <title>Portfolio</title>
+
+  <style>
+    /* General page styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #fafafa;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      margin: 5px;
+    }
+
+    /* Boxed text style */
+    .boxed-text {
+      border: 2px solid #000;      /* Black border */
+      padding: 20px;               /* Space inside */
+      margin: 20px auto;           /* Space outside, centered */
+      max-width: 800px;            /* Responsive width cap */
+      text-align: justify;         /* Square edge text */
+      background-color: #fff;      /* White background */
+      border-radius: 0;            /* Sharp edges */
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Footer style */
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #f5f5f5;
+      color: #555;
+      font-size: 0.9em;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,13 +78,14 @@
       The design allows for quick and easy access to the interface and all its inputs, knobs, and buttons, and also includes a lower storage compartment for things like picks, cables, capos, or adapters. Anchors on the top platform ensure that the interface remains firmly in place during use, even when tension is applied to the connected cables. The minimalistic yet functional approach to this design makes this product ideal for compact setups, where space is limited and efficiency is essential. With this product, I aimed to create a solution that enhances both the accessibility and efficiency of this audio and home studio essential.
     </p>
   </main>
-<br> 
+
   <main>
     <h1>DnB Art Installation Track</h1>
     <audio controls>
       <source src="MC111_projectTrack.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+
     <p class="boxed-text">
       This song was created during my first summer session as an MAT student for a group art installation project. Each member of our group was responsible for producing a drum and bass (DnB) track, a genre I had very little experience working with. 
       At first, it was hard to find direction. I knew what my song should sound like, but I didn't know what I wanted it to sound like. Through perseverance and collaboration with my groupmates, 
@@ -36,5 +93,15 @@
     </p>
   </main>
 
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>
+      <a href="mailto:your.email@example.com">Email</a> | 
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
 </body>
 </html>
+
