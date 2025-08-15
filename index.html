@@ -1,41 +1,90 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ash Villa Chavez</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-  <title>Ash Villa Chavez</title>
+  <style>
+    /* General page styles */
+    body {
+      font-family: Ahoroni, Futura, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #02750D;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    img {
+      margin: 5px;
+    }
+    /* Boxed text style */
+    .boxed-text {
+      border: 2px solid #000000; 
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: justify;
+      background-color: #FFFFFF;      
+      border-radius: 10px;   /* Fixed */
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+    /* Footer style */
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #f5f5f5;
+      color: #555;
+      font-size: 0.9em;
+      border-top: 1px solid #ddd;
+    }
+    footer a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <h1>Ash Villa Chavez</h1>
   <p>University of California, Santa Barbara '26</p>
   <p>B.A. in Film and Media Studies — Minor in Music & Media Arts and Design</p>
   <br>
-  <h2>
-    <img src="PFoliopfp.png" width="45%" height="auto">
-  </h2>
+  
+  <img src="PFoliopfp.png" alt="Profile picture" width="45%">
+  
   <br>
   <h3>Artist's Statement</h3>
-  <p>
+  <p class="boxed-text">
     My creative journey began in a world of fandoms and boy bands, where my passion as a young fangirl sparked a love for storytelling, video editing, visual media, and sound design. Now at 21, I’m an aspiring photographer, videographer, editor, musician, and overall creative. My specialties within filmmaking lie in editing, post-production, sound design, and boom operation, with additional experience in screenwriting and BTS photography. I document moments in life through vlog-style videos on my YouTube channel, whilst also sharing my progress as a filmmaker with my student projects on the channel as well. My photography spans from casual nights out to live shows to professional graduation shoots. As a self-taught guitarist, I share music covers on Instagram and am diving into the world of music production and songwriting. At my core, I want to turn the skills I developed while running fan accounts and promoting my favorite artists as a teenager into a meaningful career in the music or entertainment industry. Whether it's through visuals, sound, or storytelling, I aim to make art that connects people, inspires other fans, and reflects the same passion my younger self had.
   </p>
   <br>
   <a href="Portfolio.html">A R T I S T  - P O R T F O L I O</a>
-  <br>
-  <br>
-</body>
+  <br><br>
 
-<body> 
-  <script src="sketch.js"> </script>
-</body>
+  <!-- Sketch.js script -->
+  <script src="sketch.js"></script>
+
   <footer>
-  <p>&copy;AVC 2025. All rights reserved.</p>
-  <p>
-    <a href="mailto:ayva1603@gmail.com">Email</a> | 
-    <a href="https://github.com/avchavez" target="_blank">GitHub</a> | 
-    <a href="https://www.instagram.com/ash.villa/" target="_blank">Instagram</a> |
-    <a href="https://www.youtube.com/@_villash_7393" target="_blank">Youtube</a>
-  </p>
-</footer>
+    <p>&copy; AVC 2025. All rights reserved.</p>
+    <p>
+      <a href="mailto:ayva1603@gmail.com">Email</a> | 
+      <a href="https://github.com/avchavez" target="_blank">GitHub</a> | 
+      <a href="https://www.instagram.com/ash.villa/" target="_blank">Instagram</a> |
+      <a href="https://www.youtube.com/@_villash_7393" target="_blank">Youtube</a>
+    </p>
+  </footer>
+</body>
 </html>
+
