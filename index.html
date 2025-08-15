@@ -25,7 +25,10 @@
       text-align: center;
     }
     img {
-      margin: 5px;
+      display: block;
+      margin: 20px auto; /* centers the image */
+      max-width: 80%;    /* responsive */
+      height: auto;
     }
     /* Boxed text style */
     .boxed-text {
@@ -35,7 +38,7 @@
       max-width: 800px;
       text-align: justify;
       background-color: #FFFFFF;      
-      border-radius: 10px;   /* Fixed */
+      border-radius: 10px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
     /* Footer style */
@@ -57,24 +60,24 @@
   </style>
 </head>
 <body>
-  <h1>Ash Villa Chavez</h1>
-  <p>University of California, Santa Barbara '26</p>
-  <p>B.A. in Film and Media Studies — Minor in Music & Media Arts and Design</p>
-  <br>
-  
-  <img src="PFoliopfp.png" alt="Profile picture" width="45%">
-  
-  <br>
-  <h3>Artist's Statement</h3>
-  <p class="boxed-text">
-    My creative journey began in a world of fandoms and boy bands, where my passion as a young fangirl sparked a love for storytelling, video editing, visual media, and sound design. Now at 21, I’m an aspiring photographer, videographer, editor, musician, and overall creative. My specialties within filmmaking lie in editing, post-production, sound design, and boom operation, with additional experience in screenwriting and BTS photography. I document moments in life through vlog-style videos on my YouTube channel, whilst also sharing my progress as a filmmaker with my student projects on the channel as well. My photography spans from casual nights out to live shows to professional graduation shoots. As a self-taught guitarist, I share music covers on Instagram and am diving into the world of music production and songwriting. At my core, I want to turn the skills I developed while running fan accounts and promoting my favorite artists as a teenager into a meaningful career in the music or entertainment industry. Whether it's through visuals, sound, or storytelling, I aim to make art that connects people, inspires other fans, and reflects the same passion my younger self had.
-  </p>
-  <br>
-  <a href="Portfolio.html">A R T I S T  - P O R T F O L I O</a>
-  <br><br>
+  <main>
+    <h1>Ash Villa Chavez</h1>
+    <p>University of California, Santa Barbara '26</p>
+    <p>B.A. in Film and Media Studies — Minor in Music & Media Arts and Design</p>
+    <br>
+    <img src="PFoliopfp.png" alt="Profile picture" width="45%">
+    <br>
+    <h3>Artist's Statement</h3>
+    <p class="boxed-text">
+      My creative journey began in a world of fandoms and boy bands, where my passion as a young fangirl sparked a love for storytelling, video editing, visual media, and sound design. Now at 21, I’m an aspiring photographer, videographer, editor, musician, and overall creative. My specialties within filmmaking lie in editing, post-production, sound design, and boom operation, with additional experience in screenwriting and BTS photography. I document moments in life through vlog-style videos on my YouTube channel, whilst also sharing my progress as a filmmaker with my student projects on the channel as well. My photography spans from casual nights out to live shows to professional graduation shoots. As a self-taught guitarist, I share music covers on Instagram and am diving into the world of music production and songwriting. At my core, I want to turn the skills I developed while running fan accounts and promoting my favorite artists as a teenager into a meaningful career in the music or entertainment industry. Whether it's through visuals, sound, or storytelling, I aim to make art that connects people, inspires other fans, and reflects the same passion my younger self had.
+    </p>
+    <br>
+    <a href="Portfolio.html">A R T I S T  - P O R T F O L I O</a>
+    <br><br>
 
-  <!-- Sketch.js script -->
-  <script src="sketch.js"></script>
+    <!-- Container for p5.js sketch -->
+    <div id="sketch-container"></div>
+  </main>
 
   <footer>
     <p>&copy; AVC 2025. All rights reserved.</p>
@@ -85,6 +88,20 @@
       <a href="https://www.youtube.com/@_villash_7393" target="_blank">Youtube</a>
     </p>
   </footer>
+
+  <!-- Sketch.js script (attach to the container) -->
+  <script src="sketch.js"></script>
+  <script>
+    // Ensure canvas attaches inside #sketch-container
+    window.setup = function() {
+      let c = createCanvas(400, 400); 
+      c.parent('sketch-container'); 
+      background(220);
+    }
+    window.draw = function() {
+      // Your draw code here
+    }
+  </script>
 </body>
 </html>
 
