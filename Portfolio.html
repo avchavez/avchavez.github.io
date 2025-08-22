@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>Portfolio</title>
-  <style>
+ <style>
     /* General page styles */
     body {
       font-family: Ahoroni, Futura, sans-serif;
@@ -23,53 +23,33 @@
       text-align: center;
       color: white;
     }
-    a {
-      text-align: left;
-      color: white;
-      padding: 10px
-    }
-
-    /* Center helper */
-    .centered {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Images grouped in a row */
-    .image-row {
+    h2 {
       text-align: center;
-      margin: 15px 0;
+      color: white;
+      font-size: 10px;
     }
-    .image-row img {
-      display: inline-block;
-      margin: 5px;
+    h3 {
+      text-align: center;
+      color: white;
     }
-
-    /* Center audio player */
-    audio {
+  
+    img {
       display: block;
-      margin: 20px auto;
+      margin: 20px auto; /* centers the image */
+      max-width: 80%;    /* responsive */
+      height: auto;
     }
-
-    /* Center YouTube iframe */
-    iframe {
-      display: block;
-      margin: 20px auto;
-    }
-
     /* Boxed text style */
     .boxed-text {
-      border: 2px solid #000000; 
+      border: 2px solid #000000;
       padding: 20px;
       margin: 20px auto;
       max-width: 800px;
       text-align: justify;
-      background-color: #FFFFFF;      
-      border-radius: 5px;
+      background-color: #FFFFFF;
+      border-radius: 10px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
-
     /* Footer style */
     footer {
       text-align: center;
@@ -86,10 +66,38 @@
     footer a:hover {
       text-decoration: underline;
     }
-  </style>
-
-    
-  <nav>
+    /* Top menu styles -- NEW */
+    nav {
+      width: 100%;
+      background-color: #222;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .top-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .top-menu li {
+      margin: 0;
+      padding: 0;
+    }
+    .top-menu li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-family: Ahoroni, Futura, sans-serif;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+    .top-menu li a:hover {
+      background: #444;
+    }
+  </style> 
+ 
+<nav>
     <ul class="top-menu">
       <li><a href="index.html">Ash Villa Chavez</a></li>
       <li><a href="aboutme.html">About Me</a></li>
