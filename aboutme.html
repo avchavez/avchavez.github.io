@@ -1,68 +1,108 @@
- <style>
-    /* General page styles */
-    body {
-      font-family: Ahoroni, Futura, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background-color: #18572A;
-    }
-    main {
-      flex: 1;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: white;
-    }
-    h2 {
-      text-align: center;
-      color: white;
-    }
-    img {
-      display: block;
-      margin: 20px auto; /* centers the image */
-      max-width: 80%;    /* responsive */
-      height: auto;
-    }
-    /* Boxed text style */
-    .boxed-text {
-      border: 2px solid #000000; 
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      text-align: justify;
-      background-color: #FFFFFF;      
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
-    /* Footer style */
-    footer {
-      text-align: center;
-      padding: 1em;
-      background-color: #f5f5f5;
-      color: #555;
-      font-size: 0.9em;
-      border-top: 1px solid #ddd;
-    }
-    footer a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+/* General page styles */
+body {
+  font-family: Ahoroni, Futura, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #18572A;
+}
+main {
+  flex: 1;
+  padding: 20px;
+}
+h1, h2 {
+  text-align: center;
+  color: white;
+}
+
+/* Profile section layout */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  flex-wrap: wrap; /* makes it mobile-friendly */
+}
+
+.profile-left {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;   /* Resize photo */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.school-info h2 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #f0f0f0;
+}
+
+/* Right column with bio */
+.profile-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* Box style */
+.boxed-text {
+  border: 2px solid #000000; 
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: justify;
+  background-color: #FFFFFF;      
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #f5f5f5;
+  color: #555;
+  font-size: 0.9em;
+  border-top: 1px solid #ddd;
+}
+footer a {
+  color: #007acc;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
 <a href="index.html" class="back-link">← BACK</a>    
 
-    <img src="PFoliopfp.png" alt="Profile picture" width="45%">
-    <br>
-    <h2>University of California, Santa Barbara '26</h2>
-    <h2>B.A. in Film and Media Studies — Minor in Music & Media Arts and Design</h2>
-    <br>
+<a href="index.html" class="back-link">← BACK</a>    
+
+<div class="profile-container">
+  <!-- Left column: Image + school info -->
+  <div class="profile-left">
+    <img src="PFoliopfp.png" alt="Profile picture" class="profile-pic">
+    <div class="school-info">
+      <h2>University of California, Santa Barbara '26</h2>
+      <h2>B.A. in Film and Media Studies — Minor in Music & Media Arts and Design</h2>
+    </div>
+  </div>
+
+  <!-- Right column: Artist bio -->
+  <div class="profile-right">
     <h2>Artist Bio</h2>
     <p class="boxed-text">
       My creative journey began in a world of fandoms and boy bands, where my passion as a young fangirl sparked a love for storytelling, video editing, visual media, and sound design. Now at 21, I’m an aspiring photographer, videographer, editor, musician, and overall creative. My specialties within filmmaking lie in editing, post-production, sound design, and boom operation, with additional experience in screenwriting and BTS photography. I document moments in life through vlog-style videos on my YouTube channel, whilst also sharing my progress as a filmmaker with my student projects on the channel as well. My photography spans from casual nights out to live shows to professional graduation shoots. As a self-taught guitarist, I share music covers on Instagram and am diving into the world of music production and songwriting. At my core, I want to turn the skills I developed while running fan accounts and promoting my favorite artists as a teenager into a meaningful career in the music or entertainment industry. Whether it's through visuals, sound, or storytelling, I aim to make art that connects people, inspires other fans, and reflects the same passion my younger self had.
     </p>
+  </div>
+</div>
+
