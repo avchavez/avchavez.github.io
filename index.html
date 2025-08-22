@@ -28,18 +28,18 @@
     h2 {
       text-align: center;
       color: white;
-      font-size: 18px
+      font-size: 18px;
     }
-     h3 {
+    h3 {
       text-align: left;
       color: white;
-      font-size: 12px
+      font-size: 12px;
       margin: 30px auto;
     }
     img {
       display: block;
-      margin: 20px auto; /* centers the image */
-      max-width: 80%;    /* responsive */
+      margin: 20px auto;
+      max-width: 80%;
       height: auto;
     }
     /* Boxed text style */
@@ -67,29 +67,28 @@
     footer a:hover {
       text-decoration: underline;
     }
-    /* Top menu styles -- NEW */
+    /* Top menu styles */
     nav {
       width: 100%;
       background-color: #FFFFFF;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-     .top-menu {
+    }
+    .top-menu {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* center other items */
+      justify-content: center;
       position: relative;
     }
     .top-menu .left-item {
       position: absolute;
-      left: 20px;  /* adjust left spacing */
+      left: 20px;
     }
-    
     .top-menu li {
       margin: 0 10px;
       padding: 0;
     }
-    
     .top-menu li a {
       display: block;
       color: #18572A;
@@ -99,9 +98,25 @@
       font-size: 1.1em;
       transition: background 0.3s;
     }
-    
     .top-menu li a:hover {
       background: #BFBFBF;
+    }
+
+    /* Sketch container for canvas + textbox */
+    #sketch-container {
+      position: relative;
+      display: inline-block; /* shrink to fit canvas */
+      margin: 20px auto;     /* center on page */
+    }
+
+    /* Style for input box inside sketch */
+    #sketch-container input {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border: 2px solid #000;
+      padding: 5px;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -115,22 +130,21 @@
     <li><a href="contact.html">C O N T A C T</a></li>
   </ul>
 </nav>
-  <main>
-    <h1>------ ASH VILLA CHAVEZ ------</h1>
-<br> 
-    <h2> A U D I O | V I D E O | P H O T O | D I G I T A L - M E D I A </h2>
 
-<br>
-<br>
-    <h3> p 5  S K E T C H</h3>
-    <div id="sketch-container"></div>
-  </main>
+<main>
+  <h1>------ ASH VILLA CHAVEZ ------</h1>
+  <br> 
+  <h2>A U D I O | V I D E O | P H O T O | D I G I T A L - M E D I A</h2>
+  <br><br>
+  <h3>p5 SKETCH</h3>
+  <div id="sketch-container"></div>
+</main>
 
-  <footer>
-    <p>&copy; AVC 2025. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; AVC 2025. All rights reserved.</p>
+</footer>
 
-  <script src="sketch.js"></script>
+<script src="sketch.js"></script>
 </body>
 </html>
 
