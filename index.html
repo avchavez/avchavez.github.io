@@ -73,18 +73,24 @@
       width: 100%;
       background-color: #222;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    .top-menu {
+     .top-menu {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
+      justify-content: center; /* center other items */
+      position: relative;
     }
+    .top-menu .left-item {
+      position: absolute;
+      left: 20px;  /* adjust left spacing */
+    }
+    
     .top-menu li {
-      margin: 0;
+      margin: 0 10px;
       padding: 0;
     }
+    
     .top-menu li a {
       display: block;
       color: #fff;
@@ -94,6 +100,7 @@
       font-size: 1.1em;
       transition: background 0.3s;
     }
+    
     .top-menu li a:hover {
       background: #444;
     }
@@ -101,13 +108,14 @@
 </head>
 <body>
   <!-- TOP NAVIGATION MENU - NEW -->
-  <nav>
-    <ul class="top-menu">
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="Portfolio.html">Portfolio</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul class="top-menu">
+    <li class="left-item"><a href="index.html">Ash Villa Chavez</a></li>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="Portfolio.html">Portfolio</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</nav>
   <main>
     <h1>------ ASH VILLA CHAVEZ ------</h1>
 
