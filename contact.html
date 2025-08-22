@@ -20,25 +20,35 @@
       color: white;
       padding: 20px;
       font-size: 60px;  
+      margin: 0;
     }
 
+    /* GLOBAL link styles */
     a {
       text-align: center;
       color: white;
+      text-decoration: none; /* default no underline */
     }
 
+    /* Underline on hover for ALL links (including h1 links) */
+    a:hover, 
+    a:hover h1 {
+      text-decoration: underline;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       background-color: #18572A;
       color: #FFFFFF;
       font-size: 0.9em;
+      padding: 10px;
     }
 
     footer a {
       color: #FFFFFF;
       text-decoration: none;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
@@ -76,11 +86,12 @@
       font-family: Ahoroni, Futura, sans-serif;
       padding: 1em 2em;
       font-size: 1.1em;
-      transition: background 0.3s;
+      transition: background 0.3s, text-decoration 0.3s;
     }
 
     .top-menu li a:hover {
       background: #BFBFBF;
+      text-decoration: underline; /* underline on nav hover */
     }
   </style>
 </head>
@@ -91,15 +102,22 @@
     <ul class="top-menu">
       <li class="left-item"><a href="index.html">Ash Villa Chavez</a></li>
       <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="Portfolio.html">Portfolio</a></li> <!-- lowercase -->
+      <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
   
+  <!-- CONTACT LINKS -->
   <a href="mailto:ayva1603@gmail.com"><h1>E M A I L</h1></a> 
   <a href="https://github.com/avchavez" target="_blank"><h1>G I T  H U B</h1></a> 
   <a href="https://www.instagram.com/ash.villa/" target="_blank"><h1>I N S T A G R A M</h1></a>
   <a href="https://www.youtube.com/@_villash_7393" target="_blank"><h1>Y O U T U B E</h1></a>
 
+  <!-- Example footer (optional) -->
+  <footer>
+    <p>© 2025 Ash Villa Chavez | <a href="contact.html">Contact</a></p>
+  </footer>
+
 </body>
 </html>
+
