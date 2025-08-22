@@ -37,12 +37,12 @@
     }
     /* Boxed text style */
     .boxed-text {
-      border: 2px solid #000000; 
+      border: 2px solid #000000;
       padding: 20px;
       margin: 20px auto;
       max-width: 800px;
       text-align: justify;
-      background-color: #FFFFFF;      
+      background-color: #FFFFFF;
       border-radius: 10px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
@@ -62,9 +62,46 @@
     footer a:hover {
       text-decoration: underline;
     }
+    /* Top menu styles -- NEW */
+    nav {
+      width: 100%;
+      background-color: #222;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .top-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .top-menu li {
+      margin: 0;
+      padding: 0;
+    }
+    .top-menu li a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-family: Ahoroni, Futura, sans-serif;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+    .top-menu li a:hover {
+      background: #444;
+    }
   </style>
 </head>
 <body>
+  <!-- TOP NAVIGATION MENU - NEW -->
+  <nav>
+    <ul class="top-menu">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="Portfolio.html">Portfolio</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <main>
     <h1>Ash Villa Chavez</h1>
     <h2>University of California, Santa Barbara '26</h2>
@@ -97,4 +134,5 @@
   <script src="sketch.js"></script>
 </body>
 </html>
+
 
