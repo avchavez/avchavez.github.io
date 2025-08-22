@@ -8,12 +8,77 @@
       flex-direction: column;
       min-height: 100vh;
       background-color: #18572A;
+    }
+  
     h1 {
-      text-align: left;
+      text-align: center;
       color: white;
-      font-size: 20px
     }
 
+       
+    /* Footer style */
+    footer {
+      text-align: center;
+      background-color: #18572A;
+      color: #FFFFFF;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* Top menu styles -- NEW */
+    nav {
+      width: 100%;
+      background-color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+     .top-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* center other items */
+      position: relative;
+    }
+    .top-menu .left-item {
+      position: absolute;
+      left: 20px;  /* adjust left spacing */
+    }
+    
+    .top-menu li {
+      margin: 0 10px;
+      padding: 0;
+    }
+    
+    .top-menu li a {
+      display: block;
+      color: #18572A;
+      text-decoration: none;
+      font-family: Ahoroni, Futura, sans-serif;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+    
+    .top-menu li a:hover {
+      background: #BFBFBF;
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP NAVIGATION MENU - NEW -->
+<nav>
+  <ul class="top-menu">
+    <li class="left-item"><a href="index.html">Ash Villa Chavez</a></li>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="Portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+ 
 <h1>
       <a href="mailto:ayva1603@gmail.com">Email</a> 
      
