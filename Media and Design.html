@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PORTFOLIO</title>
+  <style>
+    /* General page styles */
+    body {
+      font-family: Ahoroni, Futura, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #18572A;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: white;
+    }
+
+    h2 { font-size: 15px; }
+
+    /* For centered elements */
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Image row using flexbox */
+    .image-row {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Vertical alignment */
+      flex-wrap: wrap; /* Wrap on smaller screens */
+      gap: 10px; /* Spacing between images */
+      margin: 20px auto;
+      max-width: 90%;
+    }
+
+    .image-row img {
+      max-width: 200px; /* Tweak to size images */
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Center audio player */
+    audio {
+      display: block;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    /* Center YouTube iframe */
+    iframe {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+
+    /* Boxed text style */
+    .boxed-text {
+      border: 2px solid #000000; 
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: justify;
+      background-color: #FFFFFF;      
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Footer style */
+    footer {
+      text-align: center;
+      background-color: #18572A;
+      color: #FFFFFF;
+      font-size: 0.9em;
+      padding: 15px 0;
+    }
+    footer a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top menu styles */
+    nav {
+      width: 100%;
+      background-color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .top-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* center other items */
+      position: relative;
+    }
+    .top-menu .left-item {
+      position: absolute;
+      left: 20px;  /* align site name left */
+    }
+
+    .top-menu li {
+      margin: 0 10px;
+      padding: 0;
+    }
+
+    .top-menu li a {
+      display: block;
+      color: #18572A;
+      text-decoration: none;
+      font-family: Ahoroni, Futura, sans-serif;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+
+    .top-menu li a:hover {
+      background: #BFBFBF;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <ul class="top-menu">
+    <li class="left-item"><a href="index.html">H O M E</a></li>
+    <li><a href="aboutme.html">A B O U T - M E</a></li>
+    <li><a href="Portfolio.html">P O R T F O L I O</a></li>
+    <li><a href="contact.html">C O N T A C T</a></li>
+  </ul>
+</nav>
+
+  <main>
+    <h1>Audio Interface Desk Shelf</h1>
+    <div class="image-row">
+      <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
+      <img src="irlProduct2.png" alt="Audio Interface Desk Shelf">
+    </div>
+    <div class="image-row">
+      <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      <img src="finalmodel2_tinkercad.png" alt="Audio Interface Desk Shelf">
+      <img src="finalmodel3_tinkercad.png" alt="Audio Interface Desk Shelf">
+    </div>
+    <p class="boxed-text">
+      The Interface Desk Shelf is an innovative solution born out of a constant issue I faced as a bedroom musician: the instability of audio interfaces caused by the pull of heavy guitar and instrument cables. During recording sessions, my interface was prone to being yanked off my desk by the cable connecting my instruments to my computer, disrupting my workflow and risking potential equipment damage. This 3D-printed product is designed specifically to securely hold a small 175 x 47.5 x 98.8 mm interface in place while also helping users maintain an organized and neat workspace.
+      The design allows for quick and easy access to the interface and all its inputs, knobs, and buttons, and also includes a lower storage compartment for things like picks, cables, capos, or adapters. Anchors on the top platform ensure that the interface remains firmly in place during use, even when tension is applied to the connected cables. The minimalistic yet functional approach to this design makes this product ideal for compact setups, where space is limited and efficiency is essential. With this product, I aimed to create a solution that enhances both the accessibility and efficiency of this audio and home studio essential.
+    </p>
+  </main>
+
+    <main>
+    <h1>JAWS Security System Robot</h1>
+    <div class="image-row">
+      <img src="arduinoBuildIRL.jpeg" alt="JAWS Bot">
+    </div>
+    <p class="boxed-text">
+      A motion-activated security alarm system that alerts its users of intruders by playing the JAWS theme (or any song of their choice)  as someone approaches it. 
+    </p>
+  </main>
+  
+    <main>
+    <h1>Life Of The Party</h1>
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/5EOYNEbcKQQ" 
+      title="Life of the Party: MATCF111 Fina Project Teaser" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <p class="boxed-text">
+      This interactive art installation, titled “The Life of the Party”, serves to thank everyone who dances first, and encourages everyone else to do the same. This 4 person collaboration came to life with the help of Vive controllers, projection mapping, and Ableton.
+    </p>
+  </main>
+
+</html>
