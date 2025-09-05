@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PORTFOLIO</title>
   <style>
-    /* General page styles */
     body {
       font-family: Ahoroni, Futura, sans-serif;
       margin: 0;
@@ -24,27 +23,55 @@
       color: white;
     }
     h2 { font-size: 15px; }
-    /* For centered elements */
     .centered {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
+    /* Portfolio section styles */
+    .portfolio-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    /* Title/text link above images, expand on hover */
+    .portfolio-title h1 {
+      transition: transform 0.25s, letter-spacing 0.25s;
+      display: inline-block;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .portfolio-title h1:hover {
+      transform: scale(1.07);
+      letter-spacing: 2px;
+    }
     /* Image row using flexbox */
     .image-row {
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Vertical alignment */
-      flex-wrap: wrap; /* Wrap on smaller screens */
-      gap: 10px; /* Spacing between images */
-      margin: 20px auto;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 auto;
       max-width: 90%;
     }
-    .image-row img {
-      max-width: 200px; /* Tweak to size images */
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    /* Ensure images are same size and style */
+    .img-group img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.12);
+      transition: box-shadow 0.35s, filter 0.4s, opacity 0.4s;
+      filter: brightness(0.85) blur(0.5px);
+      opacity: 0.93;
+      background-color: #fff;
+    }
+    .img-group img:hover {
+      filter: brightness(1) blur(0);
+      box-shadow: 0 2px 12px rgba(32,76,99,0.05);
+      opacity: 1;
     }
     /* Center audio player */
     audio {
@@ -95,12 +122,12 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* center other items */
+      justify-content: center;
       position: relative;
     }
     .top-menu .left-item {
       position: absolute;
-      left: 20px;  /* align site name left */
+      left: 20px;
     }
     .top-menu li {
       margin: 0 10px;
@@ -129,30 +156,47 @@
     <li><a href="contact.html">C O N T A C T</a></li>
   </ul>
 </nav>
-  <main>
-    <a href="MAD.html"><h1>MEDIA AND DESIGN</h1></a> 
+
+<main>
+  <div class="portfolio-section">
+    <a href="MAD.html" class="portfolio-title"><h1>MEDIA AND DESIGN</h1></a>
     <div class="image-row">
-      <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
-      <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      <div class="img-group">
+        <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
+      </div>
+      <div class="img-group">
+        <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      </div>
     </div>
-  </main>
-  <main>
-    <a href="MAA.html"><h1>MUSIC AND AUDIO</h1></a> 
+  </div>
+  
+  <div class="portfolio-section">
+    <a href="MAA.html" class="portfolio-title"><h1>MUSIC AND AUDIO</h1></a>
     <div class="image-row">
-      <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
-      <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      <div class="img-group">
+        <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
+      </div>
+      <div class="img-group">
+        <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      </div>
     </div>
-  </main>
-  <main>
-    <a href="Camera.html"><h1>CAMERA</h1></a> 
+  </div>
+  
+  <div class="portfolio-section">
+    <a href="Camera.html" class="portfolio-title"><h1>CAMERA</h1></a>
     <div class="image-row">
-      <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
-      <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      <div class="img-group">
+        <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
+      </div>
+      <div class="img-group">
+        <img src="finalmodel_tinkercad.png" alt="Audio Interface Desk Shelf">
+      </div>
     </div>
-  </main>
-  <!-- Footer -->
-  <footer>
-    <p>&copy; AVC 2025. All rights reserved.</p>
-  </footer>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; AVC 2025. All rights reserved.</p>
+</footer>
 </body>
 </html>
