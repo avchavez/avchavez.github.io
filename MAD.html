@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PORTFOLIO</title>
   <style>
+    /* General page styles */
     body {
       font-family: Ahoroni, Futura, sans-serif;
       margin: 0;
@@ -14,76 +15,88 @@
       min-height: 100vh;
       background-color: #18572A;
     }
+
     main {
       flex: 1;
       padding: 20px;
     }
+
     h1, h3 {
       text-align: left;
       color: white;
-      font-size: 40px;
     }
-    h2 {
+
+    h2{
       text-align: right;
       color: white;
-      font-size: 40px;
     }
+
+
+
+    /* For centered elements */
     .centered {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
+
+    /* Image row using flexbox */
     .image-row {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Vertical alignment */
+      flex-wrap: wrap; /* Wrap on smaller screens */
+      gap: 10px; /* Spacing between images */
       margin: 20px auto;
       max-width: 90%;
     }
+
     .image-row img {
-      max-width: 200px;
+      max-width: 200px; /* Tweak to size images */
       height: auto;
       border-radius: 5px;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
+
+    /* Center audio player */
     audio {
       display: block;
       margin: 20px auto;
       max-width: 600px;
     }
+
+    /* Center YouTube iframe */
     iframe {
       display: block;
       margin: 20px auto;
       max-width: 100%;
     }
-    .boxed-text1, .boxed-text2 {
-      border: 2px solid #000000;
+
+    /* Boxed text style */
+    .boxed-text1 {
+      border: 2px solid #000000; 
       padding: 20px;
       margin: 20px auto;
       max-width: 600px;
       text-align: justify;
-      background-color: #FFFFFF;
+      align-items: left;
+      background-color: #FFFFFF;      
       border-radius: 5px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
-    .boxed-text2 {
+      .boxed-text2 {
+      border: 2px solid #000000; 
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: justify;
       align-items: right;
+      background-color: #FFFFFF;      
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
-    .hvr-grow {
-      display: inline-block;
-      vertical-align: middle;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      transition-duration: 0.3s;
-      transition-property: transform;
-    }
-    .hvr-grow:hover,
-    .hvr-grow:focus,
-    .hvr-grow:active {
-      transform: scale(1.1);
-    }
+
+    /* Footer style */
     footer {
       text-align: center;
       background-color: #18572A;
@@ -98,27 +111,32 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Top menu styles */
     nav {
       width: 100%;
       background-color: #FFFFFF;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
+
     .top-menu {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
+      justify-content: center; /* center other items */
       position: relative;
     }
     .top-menu .left-item {
       position: absolute;
-      left: 20px;
+      left: 20px;  /* align site name left */
     }
+
     .top-menu li {
       margin: 0 10px;
       padding: 0;
     }
+
     .top-menu li a {
       display: block;
       color: #18572A;
@@ -128,11 +146,13 @@
       font-size: 1.1em;
       transition: background 0.3s;
     }
+
     .top-menu li a:hover {
       background: #BFBFBF;
     }
   </style>
 </head>
+
 <body>
 <nav>
   <ul class="top-menu">
@@ -142,9 +162,9 @@
     <li><a href="contact.html">C O N T A C T</a></li>
   </ul>
 </nav>
+
   <main>
     <h1>Audio Interface Desk Shelf</h1>
-    <p class="hvr-grow">Hover over this text to expand it</p>
     <div class="image-row">
       <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
       <img src="irlProduct2.png" alt="Audio Interface Desk Shelf">
@@ -159,23 +179,24 @@
       The design allows for quick and easy access to the interface and all its inputs, knobs, and buttons, and also includes a lower storage compartment for things like picks, cables, capos, or adapters. Anchors on the top platform ensure that the interface remains firmly in place during use, even when tension is applied to the connected cables. The minimalistic yet functional approach to this design makes this product ideal for compact setups, where space is limited and efficiency is essential. With this product, I aimed to create a solution that enhances both the accessibility and efficiency of this audio and home studio essential.
     </p>
   </main>
-  <main>
+
+    <main>
     <h2>JAWS Security System Robot</h2>
-    <p class="hvr-grow">Hover over this text to expand it</p>
-    <iframe width="560" height="315" 
+       <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/5EOYNEbcKQQ"
       title="Jaws Security Robot Demo" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
+
     <p class="boxed-text2">
       A motion-activated security alarm system that alerts its users of intruders by playing the JAWS theme (or any song of their choice)  as someone approaches it. 
     </p>
   </main>
-  <main>
+
+    <main>
     <h1>Life Of The Party</h1>
-    <p class="hvr-grow">Hover over this text to expand it</p>
     <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/xOezC7iI-_Y"
       title="Life of the Party: MATCF111 Final Project Teaser" 
@@ -187,8 +208,10 @@
       This interactive art installation, titled “The Life of the Party”, serves to thank everyone who dances first, and encourages everyone else to do the same. This 4 person collaboration came to life with the help of Vive controllers, projection mapping, and Ableton.
     </p>
   </main>
+
   <footer>
-    <p>&copy; AVC 2025. All rights reserved.</p>
+  <p>&copy; AVC 2025. All rights reserved.</p>
   </footer>
+
 </html>
 
