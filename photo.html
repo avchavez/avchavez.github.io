@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIDEO</title>
+  <title>PHOTO</title>
   <style>
     /* General page styles */
     body {
@@ -43,7 +43,65 @@
     .text-expand:hover {
       transform: scale(1.1); /* Slightly expand text on hover */
     }
-
+  body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
     /* Image row using flexbox */
     .image-row {
       display: flex;
@@ -60,20 +118,6 @@
       height: auto;
       border-radius: 5px;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
-
-    /* Center audio player */
-    audio {
-      display: block;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-
-    /* Center YouTube iframe */
-    iframe {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
     }
 
     /* Boxed text style */
