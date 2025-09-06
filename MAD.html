@@ -97,6 +97,20 @@
       border-radius: 5px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
+    .hvr-grow {
+      display: inline-block;
+      vertical-align: middle;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      transition-duration: 0.3s;
+      transition-property: transform;
+    }
+    
+    .hvr-grow:hover,
+    .hvr-grow:focus,
+    .hvr-grow:active {
+      transform: scale(1.1);
+    }
 
     /* Footer style */
     footer {
@@ -167,6 +181,8 @@
 
   <main>
     <h1>Audio Interface Desk Shelf</h1>
+    <p class="AUDIO INTERFACE DESK SHELF">Hover over this text to expand it</p>
+
     <div class="image-row">
       <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
       <img src="irlProduct2.png" alt="Audio Interface Desk Shelf">
@@ -184,6 +200,8 @@
 
     <main>
     <h2>JAWS Security System Robot</h2>
+    <p class="JAWS SECURTIY SYSTEM ROBOT">Hover over this text to expand it</p>
+
        <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/5EOYNEbcKQQ"
       title="Jaws Security Robot Demo" 
@@ -199,6 +217,8 @@
 
     <main>
     <h1>Life Of The Party</h1>
+    <p class="LIFE OF THE PARTY">Hover over this text to expand it</p>
+
     <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/xOezC7iI-_Y"
       title="Life of the Party: MATCF111 Final Project Teaser" 
