@@ -34,6 +34,15 @@
       font-size: 40px;
     }
 
+    .text-expand {
+      display: inline-block; /* Prevent layout issues during scaling */
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .text-expand:hover {
+      transform: scale(1.1); /* Slightly expand text on hover */
+    }
+    
     /* For centered elements */
     .centered {
       display: block;
@@ -154,7 +163,7 @@
 </nav>
 
     <main>
-    <h1>DnB Art Installation Track</h1>
+    <h1 class="text-expand">DnB Art Installation Track</h1>
     <audio controls>
       <source src="MC111_projectTrack.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
@@ -167,7 +176,7 @@
   </main>
   
   <main>
-    <h2>"Track Title Here"</h2>
+    <h2 class="text-expand">"Track Title Here"</h2>
     <audio controls>
       <source src="project 2 FINAL.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
