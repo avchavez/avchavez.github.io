@@ -214,7 +214,61 @@ text here
 text here 
     </p>
   </main>
+  
+<body>
+  <h1>Responsive Photo Gallery</h1>
+  <div class="gallery">
+    <img src="https://placekitten.com/400/300" alt="Kitten 1" />
+    <img src="https://placekitten.com/401/300" alt="Kitten 2" />
+    <img src="https://placekitten.com/402/300" alt="Kitten 3" />
+    <img src="https://placekitten.com/403/300" alt="Kitten 4" />
+    <img src="https://placekitten.com/404/300" alt="Kitten 5" />
+    <img src="https://placekitten.com/405/300" alt="Kitten 6" />
+  </div>
 
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <span class="close" id="closeBtn">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="Expanded photo" />
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeBtn");
+
+    document.querySelectorAll(".gallery img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      modalImg.src = "";
+      modalImg.alt = "";
+    });
+
+    window.addEventListener("click", event => {
+      if(event.target === modal){
+        modal.style.display = "none";
+        modalImg.src = "";
+        modalImg.alt = "";
+      }
+    });
+
+    window.addEventListener("keydown", e => {
+      if(e.key === "Escape" && modal.style.display === "flex"){
+        modal.style.display = "none";
+        modalImg.src = "";
+        modalImg.alt = "";
+      }
+    });
+  </script>
   <!-- Footer -->
   <footer>
     <p>&copy; AVC 2025. All rights reserved.</p>
