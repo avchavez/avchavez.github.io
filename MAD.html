@@ -34,6 +34,15 @@
       font-size: 40px;
     }
 
+    .text-expand {
+      display: inline-block; /* Prevent layout issues during scaling */
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .text-expand:hover {
+      transform: scale(1.1); /* Slightly expand text on hover */
+    }
+
     /* For centered elements */
     .centered {
       display: block;
@@ -165,7 +174,7 @@
 </nav>
 
   <main>
-    <h1>Audio Interface Desk Shelf</h1>
+    <h1 class="text-expand">Audio Interface Desk Shelf</h1>
     <div class="image-row">
       <img src="irlProduct.png" alt="Audio Interface Desk Shelf">
       <img src="irlProduct2.png" alt="Audio Interface Desk Shelf">
@@ -182,7 +191,7 @@
   </main>
 
     <main>
-    <h2>JAWS Security System Robot</h2>
+    <h2 class="text-expand">JAWS Security System Robot</h2>
        <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/5EOYNEbcKQQ"
       title="Jaws Security Robot Demo" 
@@ -197,7 +206,7 @@
   </main>
 
     <main>
-    <h1>Life Of The Party</h1>
+    <h1 class="text-expand">Life Of The Party</h1>
     <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/xOezC7iI-_Y"
       title="Life of the Party: MATCF111 Final Project Teaser" 
