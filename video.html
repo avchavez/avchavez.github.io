@@ -35,6 +35,15 @@
       margin-right: auto;
     }
 
+    .text-expand {
+      display: inline-block; /* Prevent layout issues during scaling */
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .text-expand:hover {
+      transform: scale(1.1); /* Slightly expand text on hover */
+    }
+
     /* Image row using flexbox */
     .image-row {
       display: flex;
@@ -147,7 +156,7 @@
 </nav>
   
   <main>
-    <h1>Beats Parody Commercial</h1>
+    <h1 class= "text-expand">Beats Parody Commercial</h1>
     <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/zeGMcIKcuaM" 
       title="Beats Headphone Commercial" 
@@ -165,7 +174,7 @@
   </main>
   
   <main>
-    <h1>Horror Scene Challenge</h1>
+    <h1 class= "text-expand"> Horror Scene Challenge</h1>
     <iframe 
       width="560" 
       height="315" 
