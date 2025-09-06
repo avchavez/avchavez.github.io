@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PORTFOLIO</title>
+  <style>
+    /* General page styles */
+    body {
+      font-family: Ahoroni, Futura, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #18572A;
+    }
 
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: white;
+    }
+
+    h2 { font-size: 15px; }
+
+    /* For centered elements */
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Image row using flexbox */
+    .image-row {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Vertical alignment */
+      flex-wrap: wrap; /* Wrap on smaller screens */
+      gap: 10px; /* Spacing between images */
+      margin: 20px auto;
+      max-width: 90%;
+    }
+
+    .image-row img {
+      max-width: 200px; /* Tweak to size images */
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Center audio player */
+    audio {
+      display: block;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    /* Center YouTube iframe */
+    iframe {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+
+    /* Boxed text style */
+    .boxed-text {
+      border: 2px solid #000000; 
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: justify;
+      background-color: #FFFFFF;      
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Footer style */
+    footer {
+      text-align: center;
+      background-color: #18572A;
+      color: #FFFFFF;
+      font-size: 0.9em;
+      padding: 15px 0;
+    }
+    footer a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top menu styles */
+    nav {
+      width: 100%;
+      background-color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .top-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* center other items */
+      position: relative;
+    }
+    .top-menu .left-item {
+      position: absolute;
+      left: 20px;  /* align site name left */
+    }
+
+    .top-menu li {
+      margin: 0 10px;
+      padding: 0;
+    }
+
+    .top-menu li a {
+      display: block;
+      color: #18572A;
+      text-decoration: none;
+      font-family: Ahoroni, Futura, sans-serif;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+
+    .top-menu li a:hover {
+      background: #BFBFBF;
+    }
+  </style>
+</head>
+
+<body>
+<nav>
+  <ul class="top-menu">
+    <li class="left-item"><a href="index.html">H O M E</a></li>
+    <li><a href="aboutme.html">A B O U T - M E</a></li>
+    <li><a href="Portfolio.html">P O R T F O L I O</a></li>
+    <li><a href="contact.html">C O N T A C T</a></li>
+  </ul>
+</nav>
+  
+  <main>
+    <h1>Beats Parody Commercial</h1>
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/zeGMcIKcuaM" 
+      title="Beats Headphone Commercial" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <p class="boxed-text">
+      This quick parody ad project was the product of a cinematography course, where students were tasked to write, direct, and shoot a mock commercial using all of the skills and techniques that we had learned and developed throughout the semester. 
+      The production came together through a mix of collaboration with my fellow classmates and careful planning, along with a bit of inexperience and a little fear. This marked my first time fully writing and directing a film project of any kind. This was co-directed, edited, and written all by myself, making it both an exciting and intimidating mark in my creative journey thus far. 
+      To bring the concept to life, I developed an outline to establish the flow of the video, a lookbook to establish the visual style and gather aesthetic inspiration, and a shot list to ensure organization and efficiency during the production process. 
+      The decision to parody Beats headphones was inspired by my love for musical media. I saw this as an opportunity to create a music video for the first time, using elements of rhythm, energy, and humor to showcase my creativity. 
+      The experience challenged me to lead a crew for the first time, work with time/resource constraints, think visually, and adapt quickly. In the end, I was able to deliver with the help of my peers. This project reflects my growth as a filmmaker and my courage in taking initiative.
+    </p>
+  </main>
+  
+  <main>
+    <h1>Horror Scene Challenge</h1>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/Aq3JGYnVKuw" 
+      title="Horror Scene Challenge (2023)" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+  </iframe>
+    <p class="boxed-text">
+      bio coming soon
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; AVC 2025. All rights reserved.</p>
+  </footer>
+</body>
+</html>
