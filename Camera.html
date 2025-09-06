@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PORTFOLIO</title>
+  <title>CONTACTS</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AVC</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
   <style>
-    /* General page styles */
     body {
       font-family: Ahoroni, Futura, sans-serif;
       margin: 0;
@@ -16,77 +23,36 @@
       background-color: #18572A;
     }
 
-    main {
-      flex: 1;
+    h1 {
+      text-align: center;
+      color: white;
       padding: 20px;
+      font-size: 55px;  
+      margin: 40px;
     }
 
+   
     a {
       text-align: center;
       color: white;
+      text-decoration: none; /* default no underline */
     }
 
-    a { font-size: 50px; }
-
-    /* For centered elements */
-    .centered {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    
+    a:hover, 
+    a:hover h1 {
+      text-decoration: underline;
     }
 
-    /* Image row using flexbox */
-    .image-row {
-      display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Vertical alignment */
-      flex-wrap: wrap; /* Wrap on smaller screens */
-      gap: 10px; /* Spacing between images */
-      margin: 20px auto;
-      max-width: 90%;
-    }
 
-    .image-row img {
-      max-width: 200px; /* Tweak to size images */
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-    }
-
-    /* Center audio player */
-    audio {
-      display: block;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-
-    /* Center YouTube iframe */
-    iframe {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-    }
-
-    /* Boxed text style */
-    .boxed-text {
-      border: 2px solid #000000; 
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      text-align: justify;
-      background-color: #FFFFFF;      
-      border-radius: 5px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
-
-    /* Footer style */
     footer {
       text-align: center;
       background-color: #18572A;
       color: #FFFFFF;
       font-size: 0.9em;
-      padding: 15px 0;
+      padding: 10px;
     }
+
     footer a {
       color: #FFFFFF;
       text-decoration: none;
@@ -107,12 +73,13 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* center other items */
+      justify-content: center;
       position: relative;
     }
+
     .top-menu .left-item {
       position: absolute;
-      left: 20px;  /* align site name left */
+      left: 20px;
     }
 
     .top-menu li {
@@ -127,16 +94,18 @@
       font-family: Ahoroni, Futura, sans-serif;
       padding: 1em 2em;
       font-size: 1.1em;
-      transition: background 0.3s;
+      transition: background 0.3s, text-decoration 0.3s;
     }
 
     .top-menu li a:hover {
       background: #BFBFBF;
+      text-decoration: underline; /* underline on nav hover */
     }
   </style>
 </head>
-  
-  <body>
+<body>
+
+
 <nav>
   <ul class="top-menu">
     <li class="left-item"><a href="index.html">H O M E</a></li>
@@ -145,7 +114,7 @@
     <li><a href="contact.html">C O N T A C T</a></li>
   </ul>
 </nav>
-
+  
 
   <a href="video.html"> VIDEO </a></li>
   <a href="photo.html"> PHOTO </a></li>
