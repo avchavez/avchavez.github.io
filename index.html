@@ -11,6 +11,7 @@
       height: 100%;
       background-color: #18572A;
       font-family: Ahoroni, Futura, sans-serif;
+      color: white;
     }
     nav {
       width: 100%;
@@ -49,7 +50,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
       padding: 20px;
     }
@@ -104,7 +104,7 @@
       transform: scale(1.1);
     }
     #sketch-container {
-      margin: 10px auto;
+      margin: 20px auto;
       display: inline-block;
       border: 2px solid #000;
       border-radius: 8px;
@@ -136,10 +136,11 @@
       margin-top: 40px;
     }
   </style>
+
+  <!-- Include p5.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
 </head>
-  
 <body>
-  
   <nav>
     <ul class="top-menu">
       <li class="left-item"><a href="index.html">H O M E</a></li>
@@ -151,7 +152,7 @@
   <main>
     <h1>------ ASH VILLA CHAVEZ ------</h1>
     <h2>A U D I O   •   V I D E O   •   P H O T O   •   D I G I T A L - M E D I A</h2>
-    
+
     <div class="image-row">
       <a href="MAD.html" class="image-card">
         <img src="/IMG_3877.jpg" alt="Audio Interface Desk Shelf" />
@@ -166,8 +167,10 @@
         <div class="overlay"><h1>CAMERA</h1></div>
       </a>
     </div>
+
     <h3>PROJECT HIGHLIGHT: p5 GENERATED SKETCH</h3>
-    <div src="P5sketch.js"></div>
+    <!-- Container for the p5 canvas -->
+    <div id="sketch-container"></div>
 
     <div class="download-resume">
       <p>CLICK HERE FOR MY RESUME:</p>
@@ -177,6 +180,121 @@
   <footer>
     <p>&copy; AVC 2025. All rights reserved.</p>
   </footer>
+
+  <!-- Your p5.js sketch integrated here -->
+  <script>
+    let shapes = [];
+
+    function setup() {
+      let canvas = createCanvas(700, 500);
+      canvas.parent('sketch-container');
+      angleMode(DEGREES);
+      noStroke();
+      for (let i = 0; i < 8; i++) {
+        shapes.push(new Spiral(random(width), random(height), random(30, 70), random(3, 7), random([-1, 1]), i * 20, color(30, 90, 200, 180)));
+      }
+      for (let i = 0; i < 6; i++) {
+        shapes.push(new FloatingCircle(random(width), random(height), random(20, 50), random([-1, 1]), i * 40, color(255, 215, 0, 190)));
+      }
+      for (let i = 0; i < 4; i++) {
+        shapes.push(new OtherShape(random(width), random(height), random(40, 70), random([-1, 1]), i * 50, color(40, 70, 190, 180)));
+      }
+    }
+
+    function draw() {
+      background(15, 20, 70);
+      for (let s of shapes) {
+        s.update();
+        s.display();
+      }
+    }
+
+    class Spiral {
+      constructor(x, y, radius, turns, dir, phase, col) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.turns = turns;
+        this.dir = dir;
+        this.phase = phase;
+        this.col = col;
+        this.angle = 0;
+        this.floatOffset = random(1000);
+      }
+      update() {
+        this.angle += 1.2 * this.dir;
+        this.y += sin(frameCount + this.floatOffset) * 0.5;
+      }
+      display() {
+        push();
+        translate(this.x, this.y);
+        rotate(this.angle + this.phase);
+        noFill();
+        stroke(this.col);
+        strokeWeight(2);
+        beginShape();
+        for (let a = 0; a <= 360 * this.turns; a += 5) {
+          let r = map(a, 0, 360 * this.turns, 0, this.radius);
+          let sx = r * cos(a);
+          let sy = r * sin(a);
+          vertex(sx, sy);
+        }
+        endShape();
+        pop();
+      }
+    }
+
+    class FloatingCircle {
+      constructor(x, y, diameter, dir, phase, col) {
+        this.x = x;
+        this.y = y;
+        this.diameter = diameter;
+        this.dir = dir;
+        this.phase = phase;
+        this.col = col;
+        this.angle = 0;
+        this.floatOffset = random(1000);
+      }
+      update() {
+        this.angle += 0.8 * this.dir;
+        this.y += cos(frameCount + this.floatOffset) * 0.4;
+      }
+      display() {
+        push();
+        translate(this.x, this.y);
+        rotate(this.angle + this.phase);
+        fill(this.col);
+        ellipse(0, 0, this.diameter);
+        pop();
+      }
+    }
+
+    class OtherShape {
+      constructor(x, y, size, dir, phase, col) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.dir = dir;
+        this.phase = phase;
+        this.col = col;
+        this.angle = 0;
+        this.floatOffset = random(1000);
+      }
+      update() {
+        this.angle += 1.5 * this.dir;
+        this.y += sin(frameCount * 0.7 + this.floatOffset) * 0.6;
+      }
+      display() {
+        push();
+        translate(this.x, this.y);
+        rotate(this.angle + this.phase);
+        fill(this.col);
+        rectMode(CENTER);
+        rect(0, 0, this.size * 0.6, this.size * 0.6, 5);
+        triangle(-this.size * 0.3, this.size * 0.3, 0, -this.size * 0.4, this.size * 0.3, this.size * 0.3);
+        pop();
+      }
+    }
+  </script>
 </body>
 </html>
-
