@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PHOTO</title>
   <style>
     body {
       font-family: Ahoroni, Futura, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #18572A;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      min-height: 100vh;
+      background-color: #18572A;
     }
     main {
       flex: 1;
-      width: 100%;
-      max-width: 900px;
       padding: 20px;
-      box-sizing: border-box;
     }
     h1, h2, h3 {
       text-align: justify;
       color: white;
-      margin-bottom: 10px;
     }
     h2 { font-size: 15px; }
+    .container {
+      max-width: 450px;
+      margin: 40px auto;
+    }
     .text-expand {
       display: inline-block;
       transition: transform 0.3s ease-in-out;
@@ -35,19 +34,15 @@
     .text-expand:hover {
       transform: scale(1.1);
     }
-    .section {
-      margin-bottom: 60px;
-      /* separates each section vertically */
-    }
     .carousel {
       position: relative;
-      width: 450px;
+      width: 100%;
       height: 340px;
       background: #fff;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.09);
-      margin: 0 auto 30px auto; /* centers the carousel */
+      margin-bottom: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,7 +53,7 @@
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.14);
-      transition: opacity 0.25s;
+      transition: opacity 0.5s;
       display: block;
     }
     .arrow {
@@ -80,17 +75,13 @@
     .arrow:hover {
       opacity: 1;
     }
-    .arrow.left {
-      left: 10px;
-    }
-    .arrow.right {
-      right: 10px;
-    }
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
     .boxed-text {
-      border: 2px solid #000000;
+      border: 2px solid #000000; 
       padding: 20px;
+      margin: 20px auto;
       max-width: 450px;
-      margin: 0 auto;
       text-align: center;
       background-color: #FFFFFF;
       border-radius: 5px;
@@ -102,7 +93,6 @@
       color: #FFFFFF;
       font-size: 0.9em;
       padding: 15px 0;
-      width: 100%;
     }
     nav {
       width: 100%;
@@ -140,93 +130,91 @@
   </style>
 </head>
 <body>
-  <nav>
-    <ul class="top-menu">
-      <li class="left-item"><a href="index.html">H O M E</a></li>
-      <li><a href="aboutme.html">A B O U T - M E</a></li>
-      <li><a href="Portfolio.html">P O R T F O L I O</a></li>
-      <li><a href="contact.html">C O N T A C T</a></li>
-    </ul>
-  </nav>
-  <main>
-    <div class="section">
-      <h1 class="text-expand">LIVE SHOWS</h1>
-      <div class="carousel" id="carousel1">
-        <button class="arrow left" onclick="changeSlide('carousel1', -1)">←</button>
-        <img id="carousel1-img" src="5SOSTMHLA.jpg" alt="Photo 1" />
-        <button class="arrow right" onclick="changeSlide('carousel1', 1)">→</button>
-      </div>
-      <p class="boxed-text">
-        A collection of live music events I attended and attempted to shoot for from inside the crowd
-        <br />
-        (ARTISTS FEATURED: Luke Hemmings of 5SOS, Hayley Williams of Paramore, Lindsey Lomis, 5 Seconds of Summer)
-      </p>
+<nav>
+  <ul class="top-menu">
+    <li class="left-item"><a href="index.html">H O M E</a></li>
+    <li><a href="aboutme.html">A B O U T - M E</a></li>
+    <li><a href="Portfolio.html">P O R T F O L I O</a></li>
+    <li><a href="contact.html">C O N T A C T</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="container">
+    <h1 class="text-expand">LIVE SHOWS</h1>
+    <!-- Carousel for LIVE SHOWS -->
+    <div class="carousel" id="carousel1">
+      <button class="arrow left" onclick="changeSlide('carousel1', -1)">&#8592;</button>
+      <img id="carousel1-img" src="5SOSTMHLA.jpg" alt="Photo 1" />
+      <button class="arrow right" onclick="changeSlide('carousel1', 1)">&#8594;</button>
     </div>
-
-    <div class="section">
-      <h1 class="text-expand">CANNINE (INTUITA FILMS) BTS</h1>
-      <div class="carousel" id="carousel2">
-        <button class="arrow left" onclick="changeSlide('carousel2', -1)">←</button>
-        <img id="carousel2-img" src="IMG_2954.JPG" alt="Photo 1" />
-        <button class="arrow right" onclick="changeSlide('carousel2', 1)">→</button>
-      </div>
-      <p class="boxed-text">
-        Behind the Scenes content of the making of 'Cannine', an indie film production by Intuita Films
-      </p>
+    <p class="boxed-text">
+      A collection of live music events I attended and attempted to shoot for from inside the crowd
+      <br>
+      (ARTISTS IN ORDER OF APPEARANCE: Luke Hemmings of 5SOS, Hayley Williams of Paramore, Lindsey Lomis, 5 Seconds of Summer)
+    </p>
+    <h1 class="text-expand">CANNINE (INTUITA FILMS) BTS</h1>
+    <!-- Carousel for CANNINE BTS -->
+    <div class="carousel" id="carousel2">
+      <button class="arrow left" onclick="changeSlide('carousel2', -1)">&#8592;</button>
+      <img id="carousel2-img" src="IMG_2954.JPG" alt="Photo 1" />
+      <button class="arrow right" onclick="changeSlide('carousel2', 1)">&#8594;</button>
     </div>
-  </main>
-  <footer>
-    <p>&copy; AVC 2025. All rights reserved.</p>
-  </footer>
-  <script>
-    // Carousel for LIVE SHOWS
-    const liveShowsImages = [
-      "5SOSTMHLA.jpg",
-      "pmorethisiswhy.jpg",
-      "lukeFONDA.jpg",
-      "lindseylomis1.jpg",
-      "tmhCONE.jpg",
-      "tmhLUKE.jpg",
-      "lindseylomis3.jpg"
-    ];
-    let liveShowsCurrent = 0;
+    <p class="boxed-text">Behind-the-scenes of Intuita Films shoot.</p>
+  </div>
+</main>
+<footer>
+  <p>&copy; AVC 2025. All rights reserved.</p>
+</footer>
+<script>
+  // Carousel for LIVE SHOWS
+  const liveShowsImages = [
+    "5SOSTMHLA.jpg",
+    "pmorethisiswhy.jpg",
+    "lukeFONDA.jpg",
+    "lindseylomis1.jpg",
+    "tmhCONE.jpg",
+    "lindseylomis2.jpg",
+    "tmhLUKE.jpg",
+    "lindseylomis3.jpg"
+  ];
+  let liveShowsCurrent = 0;
 
-    // Carousel for CANNINE BTS
-    const cannineImages = [
-      "IMG_2954.JPG",
-      "IMG_3662(finshadow).jpeg",
-      "IMG_3644(colinDog).jpeg"
-    ];
-    let cannineCurrent = 0;
+  // Carousel for CANNINE BTS
+  const cannineImages = [
+    "IMG_2954.JPG",
+    "IMG_3662(finshadow).jpeg",
+    "IMG_3644(colinDog).jpeg"
+  ];
+  let cannineCurrent = 0;
 
-    function changeSlide(carouselId, offset) {
-      let images, current, imgEl;
-
-      if (carouselId === "carousel1") {
-        images = liveShowsImages;
-        liveShowsCurrent += offset;
-        if (liveShowsCurrent < 0) liveShowsCurrent = images.length - 1;
-        if (liveShowsCurrent >= images.length) liveShowsCurrent = 0;
-        imgEl = document.getElementById("carousel1-img");
-      } else if (carouselId === "carousel2") {
-        images = cannineImages;
-        cannineCurrent += offset;
-        if (cannineCurrent < 0) cannineCurrent = images.length - 1;
-        if (cannineCurrent >= images.length) cannineCurrent = 0;
-        imgEl = document.getElementById("carousel2-img");
-      }
-
-      if (imgEl) {
-        imgEl.style.opacity = 0;
-        setTimeout(() => {
-          imgEl.src = images[current];
-          imgEl.alt = "Photo " + (current + 1);
-          imgEl.style.opacity = 1;
-        }, 250);
-      }
+  function changeSlide(carouselId, offset) {
+    let images, current, imgEl;
+    if (carouselId === "carousel1") {
+      images = liveShowsImages;
+      liveShowsCurrent += offset;
+      if (liveShowsCurrent < 0) liveShowsCurrent = images.length - 1;
+      if (liveShowsCurrent >= images.length) liveShowsCurrent = 0;
+      imgEl = document.getElementById("carousel1-img");
+      imgEl.style.opacity = 0;
+      setTimeout(() => {
+        imgEl.src = images[liveShowsCurrent];
+        imgEl.alt = "Photo " + (liveShowsCurrent + 1);
+        imgEl.style.opacity = 1;
+      }, 250);
+    } else if (carouselId === "carousel2") {
+      images = cannineImages;
+      cannineCurrent += offset;
+      if (cannineCurrent < 0) cannineCurrent = images.length - 1;
+      if (cannineCurrent >= images.length) cannineCurrent = 0;
+      imgEl = document.getElementById("carousel2-img");
+      imgEl.style.opacity = 0;
+      setTimeout(() => {
+        imgEl.src = images[cannineCurrent];
+        imgEl.alt = "Photo " + (cannineCurrent + 1);
+        imgEl.style.opacity = 1;
+      }, 250);
     }
-  </script>
+  }
+</script>
 </body>
 </html>
-
-
