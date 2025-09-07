@@ -158,24 +158,12 @@
     </div>
 
     <h3>PROJECT HIGHLIGHT: p5 GENERATED SKETCH</h3>
-    <div id="sketch-container"></div>
+    <img src="p5.js" />
   </main>
   <footer>
     <p>&copy; AVC 2025. All rights reserved.</p>
   </footer>
 
-  <script>
-    // p5.js sketch integration
-    function setup() {
-      let canvas = createCanvas(400, 400);
-      canvas.parent('sketch-container');  // put canvas inside #sketch-container
-      background('#18572A');
-    }
-    function draw() {
-      // example: simple animated sketch
-      fill(255);
-      ellipse(frameCount % width, height/2, 50, 50);
-    }
   </script>
 
   <!-- Load p5.js from CDN -->
