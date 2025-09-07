@@ -15,22 +15,26 @@
       min-height: 100vh;
       background-color: #18572A;
     }
-
-    main {
+ main {
       flex: 1;
       padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
     }
     h1, h2, h3 {
       text-align: justify;
       color: white;
     }
-
     h2 { font-size: 15px; }
-
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    .text-expand {
+      display: inline-block;
+      transition: transform 0.3s ease-in-out;
+    }
+    .text-expand:hover {
+      transform: scale(1.1);
+    }
     /* For centered elements */
     .centered {
       display: block;
