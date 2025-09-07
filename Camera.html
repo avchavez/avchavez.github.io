@@ -84,7 +84,13 @@
 .link-wrapper:hover .hover-overlay {
   opacity: 1;
 }
-    
+.link-wrapper.left .hover-overlay {
+  left: 0;
+}
+
+.link-wrapper.right .hover-overlay {
+  right: 0;
+}    
 a.text-expand {
   position: relative;
   z-index: 20; /* above overlay */
