@@ -13,7 +13,6 @@
       background-color: #18572A;
       font-family: Ahoroni, Futura, sans-serif;
     }
-
     nav {
       width: 100%;
       background-color: #FFFFFF; 
@@ -45,24 +44,20 @@
     .top-menu li a:hover {
       background: #BFBFBF;
     }
-
     main {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;      /* horizontally centers all children */
-      justify-content: center;  /* vertically centers (optional) */
+      align-items: center;
+      justify-content: center;
       color: white;
       text-align: center;
       padding: 20px;
     }
-
     h1, h2, h3 {
       margin: 10px 0;
       transition: transform 0.3s ease;
     }
-
-    /* Container for image cards row (unchanged) */
     .image-row {
       display: flex;
       justify-content: center;
@@ -109,16 +104,12 @@
     .image-card:hover h1 {
       transform: scale(1.1);
     }
-
-    /* Sketch container: center inline-block + margin auto */
     #sketch-container {
       margin: 20px auto;
       display: inline-block;
-      /* optional border or shadow for visibility */
       border: 2px solid #000;
       border-radius: 8px;
     }
-
     footer {
       text-align: center;
       background-color: #18572A;
@@ -141,7 +132,6 @@
   <main>
     <h1>------ ASH VILLA CHAVEZ ------</h1>
     <h2>A U D I O   •   V I D E O   •   P H O T O   •   D I G I T A L - M E D I A</h2>
-
     <div class="image-row">
       <a href="MAD.html" class="image-card">
         <img src="/IMG_3877.jpg" alt="Audio Interface Desk Shelf" />
@@ -156,18 +146,25 @@
         <div class="overlay"><h1>CAMERA</h1></div>
       </a>
     </div>
-
     <h3>PROJECT HIGHLIGHT: p5 GENERATED SKETCH</h3>
-    <img src="p5.js" />
+    <div id="sketch-container"></div>
   </main>
   <footer>
     <p>&copy; AVC 2025. All rights reserved.</p>
   </footer>
 
+  <script>
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('sketch-container'); // Add canvas inside #sketch-container
+      background('#18572A');
+    }
+
+    function draw() {
+      fill(255);
+      ellipse(frameCount % width, height / 2, 50, 50);
+    }
   </script>
 
-  <!-- Load p5.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
 </body>
 </html>
-
