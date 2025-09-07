@@ -61,55 +61,46 @@
       z-index: 20; /* Keep above overlay */
     }
 
-    /* Each link wrapper */
-    .link-wrapper {
-      position: relative;
-      flex: 1;
-      max-width: 400px;
-      text-align: center;
-    }
+.link-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  z-index: 15; /* make sure link is above overlay */
+}
 
-    /* Overlay that shows on hover */
-    .hover-overlay {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      width: 50vw;
-      background-color: rgba(0, 0, 0, 0.6);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 10;
-    }
+.hover-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  pointer-events: none; /* don't block clicks */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10; /* lower than link */
+}
 
-    /* Overlay visible on hover */
-    .link-wrapper:hover .hover-overlay {
-      opacity: 1;
-      pointer-events: auto;
-    }
+.link-wrapper:hover .hover-overlay {
+  opacity: 1;
+}
+    
+a.text-expand {
+  position: relative;
+  z-index: 20; /* above overlay */
+  display: inline-block;
+  color: white;
+  font-size: 55px;
+  margin: 40px 0;
+  padding: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
 
-    /* Position overlays left or right */
-    .link-wrapper.left .hover-overlay {
-      left: 0;
-    }
-    .link-wrapper.right .hover-overlay {
-      right: 0;
-    }
-
-    /* Text links */
-    a.text-expand {
-      display: inline-block;
-      color: white;
-      font-size: 55px;
-      margin: 40px 0;
-      padding: 20px;
-      text-decoration: none;
-      transition: transform 0.3s ease-in-out;
-    }
-    a.text-expand:hover {
-      transform: scale(1.1);
-      text-decoration: underline;
-    }
+a.text-expand:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
 
     footer {
       text-align: center;
