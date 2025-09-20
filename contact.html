@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CONTACTS</title>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AVC</title>
-  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
   <style>
     body {
@@ -30,46 +23,46 @@
       text-align: center;
       color: white;
       padding: 20px;
-      font-size: 35px;  
+      font-size: clamp(2rem, 6vw, 3.5rem);
       margin: 30px;
     }
     h2 {
       text-align: left;
       color: white;
       padding: 20px;
-      font-size: 35px;  
-      margin: 5px;
-      margin-left: 25px
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      margin: 5px 0 5px 25px;
     }
     a {
       text-align: center;
       color: white;
       text-decoration: none; 
-      font-size: 30px;  /* default no underline */
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      display: block;
+      margin: 10px 0;
+      transition: transform 0.3s ease-in-out, text-decoration 0.3s;
     }
-
-    
     a:hover, 
     a:hover h1 {
       text-decoration: underline;
+      transform: scale(1.1);
     }
     .text-expand {
-      display: inline-block; /* Prevent layout issues during scaling */
+      display: inline-block; 
       transition: transform 0.3s ease-in-out;
     }
-  
     .text-expand:hover {
-      transform: scale(1.1); /* Slightly expand text on hover */
+      transform: scale(1.1);
     }
-
     footer {
       text-align: center;
       background-color: #18572A;
       color: #FFFFFF;
       font-size: 0.9em;
       padding: 10px;
+      margin-top: auto;
+      width: 100vw;
     }
-
     footer a {
       color: #FFFFFF;
       text-decoration: none;
@@ -77,14 +70,11 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    /* Top menu styles */
     nav {
       width: 100%;
       background-color: #FFFFFF;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
-
     .top-menu {
       list-style: none;
       margin: 0;
@@ -92,37 +82,76 @@
       display: flex;
       justify-content: center;
       position: relative;
+      flex-wrap: wrap;
     }
-
     .top-menu .left-item {
       position: absolute;
       left: 20px;
     }
-
     .top-menu li {
       margin: 0 10px;
       padding: 0;
     }
-
     .top-menu li a {
       display: block;
       color: #18572A;
       text-decoration: none;
       font-family: Ahoroni, Futura, sans-serif;
       padding: 1em 2em;
-      font-size: 1.1em;
+      font-size: clamp(1em, 2vw, 1.1em);
       transition: background 0.3s, text-decoration 0.3s;
+      word-break: break-word;
+      min-width: 0;
     }
-
     .top-menu li a:hover {
       background: #BFBFBF;
-      text-decoration: underline; /* underline on nav hover */
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      .top-menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-menu .left-item {
+        position: static;
+        left: 0;
+        margin-bottom: 8px;
+      }
+      .top-menu li a {
+        font-size: clamp(0.8em, 4vw, 1em);
+        padding: 0.6em 1.2em;
+      }
+      h1 {
+        font-size: clamp(1.8rem, 7vw, 3.2rem);
+        padding: 16px 20px;
+      }
+      h2 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        padding-left: 20px;
+      }
+      a {
+        font-size: clamp(1.3rem, 7vw, 2.2rem);
+        margin: 8px 0;
+      }
+    }
+    @media (max-width: 460px) {
+      .top-menu li a {
+        font-size: clamp(0.7em, 7vw, 0.9em);
+        padding: 0.4em 0.7em;
+      }
+      h1 {
+        font-size: clamp(1.5rem, 9vw, 2.6rem);
+      }
+      h2 {
+        font-size: clamp(1.2rem, 8vw, 2rem);
+      }
+      a {
+        font-size: clamp(1.1rem, 11vw, 1.7rem);
+      }
     }
   </style>
 </head>
 <body>
-
-
 <nav>
   <ul class="top-menu">
     <li class="left-item"><a href="index.html">H O M E</a></li>
@@ -131,21 +160,17 @@
     <li><a href="contact.html">C O N T A C T</a></li>
   </ul>
 </nav>
-  
 <h2>
   GET IN TOUCH WITH ME!
 </h2>
-  <br>
-  <a href="mailto:ayva1603@gmail.com"><h1 class="text-expand">E M A I L</h1></a> 
-  <a href="https://github.com/avchavez" target="_blank"><h1 class="text-expand">G I T  H U B</h1></a> 
-  <a href="https://www.instagram.com/ash.villa/" target="_blank"><h1 class="text-expand">I N S T A G R A M</h1></a>
-  <a href="https://www.youtube.com/@_villash_7393" target="_blank"><h1 class="text-expand">Y O U T U B E</h1></a>
-  <a href="RESUME-Ashley Villa.pdf" target="_blank"><h1 class="text-expand">A V C - R E S U M E</h1></a>
-
-  <footer>
-     <p>&copy; AVC 2025. All rights reserved.</p>
-  </footer>
-
+<br>
+<a href="mailto:ayva1603@gmail.com"><h1 class="text-expand">E M A I L</h1></a> 
+<a href="https://github.com/avchavez" target="_blank"><h1 class="text-expand">G I T  H U B</h1></a> 
+<a href="https://www.instagram.com/ash.villa/" target="_blank"><h1 class="text-expand">I N S T A G R A M</h1></a>
+<a href="https://www.youtube.com/@_villash_7393" target="_blank"><h1 class="text-expand">Y O U T U B E</h1></a>
+<a href="RESUME-Ashley Villa.pdf" target="_blank"><h1 class="text-expand">A V C - R E S U M E</h1></a>
+<footer>
+  <p>&copy; AVC 2025. All rights reserved.</p>
+</footer>
 </body>
 </html>
-
