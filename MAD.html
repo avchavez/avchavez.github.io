@@ -15,157 +15,153 @@
       min-height: 100vh;
       background-color: #18572A;
     }
-
     main {
       flex: 1;
       padding: 20px;
       text-align: center;
     }
-     .container {
+    .container {
       max-width: 800px;
       margin: 40px auto;
     }
-  h1, h3 {
+    h1, h3 {
       text-align: center;
       color: white;
       font-size: 40px;
     }
-
-    h2{
+    h2 {
       text-align: center;
       color: white;
       font-size: 40px;
     }
-
     .text-expand {
-      display: inline-block; /* Prevent layout issues during scaling */
+      display: inline-block;
       transition: transform 0.3s ease-in-out;
     }
-    
     .text-expand:hover {
-      transform: scale(1.1); /* Slightly expand text on hover */
+      transform: scale(1.1);
     }
-
-    /* For centered elements */
     .centered {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
-
-    /* Image row using flexbox */
     .image-row {
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Vertical alignment */
-      flex-wrap: wrap; /* Wrap on smaller screens */
-      gap: 10px; /* Spacing between images */
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
       margin: 20px auto;
       max-width: 90%;
     }
-
     .image-row img {
-      max-width: 200px; /* Tweak to size images */
+      max-width: 200px;
       height: auto;
       border-radius: 5px;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
-
-    /* Center audio player */
     audio {
       display: block;
       margin: 20px auto;
       max-width: 600px;
     }
-
-    /* Center YouTube iframe */
     iframe {
       display: block;
       margin: 20px auto;
       max-width: 100%;
     }
-
-    /* Boxed text style */
-    .boxed-text1 {
-      border: 2px solid #000000; 
+    .boxed-text1, .boxed-text2 {
+      border: 2px solid #000;
       padding: 20px;
       margin: 20px auto;
       max-width: 600px;
       text-align: justify;
-      align-items: left;
-      background-color: #FFFFFF;      
+      background-color: #FFF;
       border-radius: 5px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
-      .boxed-text2 {
-      border: 2px solid #000000; 
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      text-align: justify;
-      align-items: right;
-      background-color: #FFFFFF;      
-      border-radius: 5px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
-
     /* Footer style */
     footer {
       text-align: center;
       background-color: #18572A;
-      color: #FFFFFF;
+      color: #FFF;
       font-size: 0.9em;
       padding: 15px 0;
+      width: 100vw;
+      margin-top: 40px;
     }
     footer a {
-      color: #FFFFFF;
+      color: #FFF;
       text-decoration: none;
     }
     footer a:hover {
       text-decoration: underline;
     }
-
     /* Top menu styles */
     nav {
       width: 100%;
-      background-color: #FFFFFF;
+      background-color: #FFF;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
-
     .top-menu {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* center other items */
+      justify-content: center;
       position: relative;
+      flex-wrap: wrap;
     }
     .top-menu .left-item {
       position: absolute;
-      left: 20px;  /* align site name left */
+      left: 20px;
     }
-
     .top-menu li {
       margin: 0 10px;
       padding: 0;
     }
-
     .top-menu li a {
       display: block;
       color: #18572A;
       text-decoration: none;
       font-family: Ahoroni, Futura, sans-serif;
       padding: 1em 2em;
-      font-size: 1.1em;
+      font-size: clamp(1em, 2vw, 1.1em);
       transition: background 0.3s;
+      word-break: break-word;
+      min-width: 0;
     }
-
     .top-menu li a:hover {
       background: #BFBFBF;
     }
+    /* Responsive nav on small screens */
+    @media (max-width: 700px) {
+      .top-menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-menu .left-item {
+        position: static;
+        left: 0;
+        margin-bottom: 8px;
+      }
+      .top-menu li a {
+        font-size: clamp(0.8em, 4vw, 1em);
+        padding: 0.6em 1.2em;
+      }
+    }
+    @media (max-width: 460px) {
+      h1, h2, h3 {
+        font-size: 30px;
+      }
+      .top-menu li a {
+        font-size: clamp(0.7em, 7vw, 0.9em);
+        padding: 0.4em 0.7em;
+      }
+    }
   </style>
 </head>
-
 <body>
 <nav>
   <ul class="top-menu">
@@ -175,7 +171,6 @@
     <li><a href="contact.html">C O N T A C T</a></li>
   </ul>
 </nav>
-
   <main>
     <h1 class="text-expand">Audio Interface Desk Shelf</h1>
     <div class="image-row">
@@ -192,8 +187,7 @@
       The design allows for quick and easy access to the interface and all its inputs, knobs, and buttons, and also includes a lower storage compartment for things like picks, cables, capos, or adapters. Anchors on the top platform ensure that the interface remains firmly in place during use, even when tension is applied to the connected cables. The minimalistic yet functional approach to this design makes this product ideal for compact setups, where space is limited and efficiency is essential. With this product, I aimed to create a solution that enhances both the accessibility and efficiency of this audio and home studio essential.
     </p>
   </main>
-
-    <main>
+  <main>
     <h2 class="text-expand">JAWS Security System Robot</h2>
        <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/5EOYNEbcKQQ"
@@ -202,13 +196,11 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
-
     <p class="boxed-text2">
       A motion-activated security alarm system that playfully alerts users of intruders by playing the JAWS theme (or any song of choice) as someone approaches. Built using an Arduino Uno, HC-SR04 motion sensor, piezo buzzer, LEDs, and a cardboard prototype, this project came to life through curiosity, experimentation, and just a quarter’s worth of beginner coding experience.
     </p>
   </main>
-
-    <main>
+  <main>
     <h1 class="text-expand">Life Of The Party</h1>
     <iframe width="560" height="315" 
       src="https://www.youtube.com/embed/xOezC7iI-_Y"
@@ -221,10 +213,9 @@
       This interactive art installation, titled “The Life of the Party”, serves to thank everyone who dances first, and encourages everyone else to do the same. This 4 person collaboration came to life with the help of Vive controllers, projection mapping, and Ableton.
     </p>
   </main>
-
   <footer>
-  <p>&copy; AVC 2025. All rights reserved.</p>
+    <p>&copy; AVC 2025. All rights reserved.</p>
   </footer>
-
+</body>
 </html>
 
