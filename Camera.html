@@ -14,15 +14,21 @@
       flex-direction: column;
       min-height: 100vh;
       background-color: #18572A;
-
+    }
     a {
       text-align: left;
       color: white;
       padding: 20px;
-      font-size: 35px;  
+      font-size: clamp(1.5rem, 5vw, 3.4rem);
       margin: 5px;
-      }
-    /* Nav styles */
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease-in-out, text-decoration 0.3s;
+    }
+    a:hover, a.text-expand:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
     nav {
       width: 100%;
       background-color: #FFFFFF;
@@ -35,6 +41,7 @@
       display: flex;
       justify-content: center;
       position: relative;
+      flex-wrap: wrap;
     }
     .top-menu .left-item {
       position: absolute;
@@ -50,71 +57,51 @@
       text-decoration: none;
       font-family: Ahoroni, Futura, sans-serif;
       padding: 1em 2em;
-      font-size: 1.1em;
+      font-size: clamp(1em, 2vw, 1.1em);
       transition: background 0.3s, text-decoration 0.3s;
+      word-break: break-word;
+      min-width: 0;
     }
     .top-menu li a:hover {
       background: #BFBFBF;
       text-decoration: underline;
     }
-
-    /* Container holding links side by side */
     .link-container {
       display: flex;
       justify-content: center;
       gap: 60px;
       margin: 40px 0;
       position: relative;
-      z-index: 20; /* Keep above overlay */
+      z-index: 20;
+      flex-wrap: wrap;
     }
-
-.link-wrapper {
-  position: relative;
-  flex: 1;
-  max-width: 400px;
-  text-align: center;
-  z-index: 15; /* make sure link is above overlay */
-}
-
-.hover-overlay {
-  position: fixed;
-  top: 60px; /* start below nav */
-  bottom: 0;
-  width: 50vw;
-  background-color: rgba(0, 0, 0, 0.6);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-.link-wrapper:hover .hover-overlay {
-  opacity: 1;
-}
-.link-wrapper.left .hover-overlay {
-  left: 0;
-}
-
-.link-wrapper.right .hover-overlay {
-  right: 0;
-}    
-a.text-expand {
-  position: relative;
-  z-index: 20; /* above overlay */
-  display: inline-block;
-  color: white;
-  font-size: 55px;
-  margin: 350px 0;
-  padding: 20px;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-a.text-expand:hover {
-  transform: scale(1.1);
-  text-decoration: underline;
-}
-
+    .link-wrapper {
+      position: relative;
+      flex: 1;
+      max-width: 400px;
+      text-align: center;
+      z-index: 15;
+    }
+    .hover-overlay {
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      width: 50vw;
+      background-color: rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+    .link-wrapper:hover .hover-overlay {
+      opacity: 1;
+    }
+    .link-wrapper.left .hover-overlay {
+      left: 0;
+    }
+    .link-wrapper.right .hover-overlay {
+      right: 0;
+    }    
     footer {
       text-align: center;
       background-color: #18572A;
@@ -130,6 +117,40 @@ a.text-expand:hover {
     footer a:hover {
       text-decoration: underline;
     }
+    @media (max-width: 700px) {
+      .top-menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-menu .left-item {
+        position: static;
+        left: 0;
+        margin-bottom: 8px;
+      }
+      .top-menu li a {
+        font-size: clamp(0.8em, 4vw, 1em);
+        padding: 0.6em 1.2em;
+      }
+      a {
+        font-size: clamp(1.3rem, 7vw, 2.8rem);
+        padding: 15px;
+      }
+      .link-container {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px 0;
+      }
+    }
+    @media (max-width: 460px) {
+      .top-menu li a {
+        font-size: clamp(0.7em, 7vw, 0.9em);
+        padding: 0.4em 0.7em;
+      }
+      a {
+        font-size: clamp(1rem, 10vw, 2.2rem);
+        padding: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -141,7 +162,6 @@ a.text-expand:hover {
       <li><a href="contact.html">C O N T A C T</a></li>
     </ul>
   </nav>
-
   <div class="link-container">
     <div class="link-wrapper left">
       <a href="video.html" class="text-expand">VIDEO</a>
@@ -152,7 +172,6 @@ a.text-expand:hover {
       <div class="hover-overlay"></div>
     </div>
   </div>
-
   <footer>
     <p>&copy; AVC 2025. All rights reserved.</p>
   </footer>
