@@ -151,7 +151,7 @@
       <button class="arrow right" onclick="changeSlide('carousel1', 1)">&#8594;</button>
     </div>
     <p class="boxed-text">
-      A collection of live music events I attended and attempted to shoot for from inside the crowd
+      A collection of live music events I attended and attempted to shoot for from inside the crowd. Shot on iPhone and edited on Adobe Photoshop and Lightroom.
       <br>
       (ARTISTS INCLUDED: Luke Hemmings of 5SOS, Hayley Williams of Paramore, Lindsey Lomis, 5 Seconds of Summer)
     </p>
@@ -164,13 +164,13 @@
       <img id="carousel2-img" src="IMG_2954.JPG" alt="Photo 1" />
       <button class="arrow right" onclick="changeSlide('carousel2', 1)">&#8594;</button>
     </div>
-    <p class="boxed-text">Behind-the-scenes content of 'Cannine', an indie film production by Intuita Films. </p>
+    <p class="boxed-text">Behind-the-scenes content of 'Cannine', an indie film production by Intuita Films. Shot with a Canon EOS Rebel T7i/800D DSLR Camera. </p>
   </div>
 
     <h1 class="text-expand">GRAD PHOTOSHOOT</h1>
       <div class="carousel" id="carousel2">
       <button class="arrow left" onclick="changeSlide('carousel2', -1)">&#8592;</button>
-      <img id="carousel2-img" src="_____" alt="Photo 1" />
+      <img id="carousel2-img" src="group2.jpg" alt="Photo 1" />
       <button class="arrow right" onclick="changeSlide('carousel2', 1)">&#8594;</button>
     </div>
     <p class="boxed-text">Makeshift photoshoot for recent 2025 college grads. First attempt at conducting and planning a shoot like this. Shot with a Canon EOS Rebel T7i/800D DSLR Camera and edited on Adobe Photoshop and Lightroom.</p>
@@ -203,6 +203,23 @@
   "IMG_3721(prodTeam).jpeg",  
 ];
   let cannineCurrent = 0;
+
+  const gradImages = [
+  "group2.jpg",
+  "group1.jpg",
+  "group3.jpg",
+  "uci4.jpg",
+  "uci1.jpg", 
+  "uci3.jpg"
+  "csulb1.jpg",
+  "csulb2.jpg",
+  "cnl3.jpg", 
+  "cnl4.jpg"
+  "cnl6.jpg"
+  "ucibeach.jpg"
+  "cnl1.jpg"
+];
+  let gradCurrent = 0;
 
   function changeSlide(carouselId, offset) {
     let images, current, imgEl;
