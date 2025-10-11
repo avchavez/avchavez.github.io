@@ -181,74 +181,87 @@
   <p>&copy; AVC 2025. All rights reserved.</p>
 </footer>
 <script>
-  // Carousel for LIVE SHOWS
-  const liveShowsImages = [
-    "5SOSTMHLA.jpg",
-    "pmorethisiswhy.jpg",
-    "lukeFONDA.jpg",
-    "lindseylomis1.jpg",
-    "tmhCONE.jpg",
-    "tmhLUKE.jpg",
-    "lindseylomis3.jpg"
-  ];
-  let liveShowsCurrent = 0;
+// Arrays for images
+const liveShowsImages = [
+  "5SOSTMHLA.jpg",
+  "pmorethisiswhy.jpg",
+  "lukeFONDA.jpg",
+  "lindseylomis1.jpg",
+  "tmhCONE.jpg",
+  "tmhLUKE.jpg",
+  "lindseylomis3.jpg"
+];
+let liveShowsCurrent = 0;
 
-  // Carousel for CANNINE BTS
-  const cannineImages = [
+const cannineImages = [
   "IMG_2954.JPG",
   "IMG_3662(finshadow).jpeg",
   "IMG_3644(colinDog).jpeg",
   "IMG_3472.jpeg",
   "IMG_2873(winnerSHOT).JPG",
-  "IMG_3721(prodTeam).jpeg",  
+  "IMG_3721(prodTeam).jpeg"
 ];
-  let cannineCurrent = 0;
+let cannineCurrent = 0;
 
-  const gradImages = [
+// Fixes: Add missing commas for gradImages
+const gradImages = [
   "group2.jpg",
   "group1.jpg",
   "group3.jpg",
   "uci4.jpg",
-  "uci1.jpg", 
-  "uci3.jpg"
+  "uci1.jpg",
+  "uci3.jpg",
   "csulb1.jpg",
   "csulb2.jpg",
-  "cnl3.jpg", 
-  "cnl4.jpg"
-  "cnl6.jpg"
-  "ucibeach.jpg"
+  "cnl3.jpg",
+  "cnl4.jpg",
+  "cnl6.jpg",
+  "ucibeach.jpg",
   "cnl1.jpg"
 ];
-  let gradCurrent = 0;
+let gradCurrent = 0;
 
-  function changeSlide(carouselId, offset) {
-    let images, current, imgEl;
-    if (carouselId === "carousel1") {
-      images = liveShowsImages;
-      liveShowsCurrent += offset;
-      if (liveShowsCurrent < 0) liveShowsCurrent = images.length - 1;
-      if (liveShowsCurrent >= images.length) liveShowsCurrent = 0;
-      imgEl = document.getElementById("carousel1-img");
-      imgEl.style.opacity = 0;
-      setTimeout(() => {
-        imgEl.src = images[liveShowsCurrent];
-        imgEl.alt = "Photo " + (liveShowsCurrent + 1);
-        imgEl.style.opacity = 1;
-      }, 250);
-    } else if (carouselId === "carousel2") {
+function changeSlide(carouselId, offset) {
+  let images, current, imgEl;
+  if (carouselId === "carousel1") {
+    images = liveShowsImages;
+    current = liveShowsCurrent + offset;
+    if (current < 0) current = images.length - 1;
+    if (current >= images.length) current = 0;
+    liveShowsCurrent = current;
+    imgEl = document.getElementById("carousel1-img");
+  } else if (carouselId === "carousel2") {
+    // To avoid conflicts, use a counter to track which carousel2
+    // The first 'carousel2' is for Cannine BTS, the second for Grad Photoshoot
+    // Use the currently displayed image's src to determine which array to use
+    imgEl = document.getElementById("carousel2-img");
+    // If filename matches any cannineImages, use cannine logic
+    if (cannineImages.includes(imgEl.src.split('/').pop())) {
       images = cannineImages;
-      cannineCurrent += offset;
-      if (cannineCurrent < 0) cannineCurrent = images.length - 1;
-      if (cannineCurrent >= images.length) cannineCurrent = 0;
-      imgEl = document.getElementById("carousel2-img");
-      imgEl.style.opacity = 0;
-      setTimeout(() => {
-        imgEl.src = images[cannineCurrent];
-        imgEl.alt = "Photo " + (cannineCurrent + 1);
-        imgEl.style.opacity = 1;
-      }, 250);
+      current = cannineCurrent + offset;
+      if (current < 0) current = images.length - 1;
+      if (current >= images.length) current = 0;
+      cannineCurrent = current;
+    } else {
+      // Otherwise use gradImages
+      images = gradImages;
+      current = gradCurrent + offset;
+      if (current < 0) current = images.length - 1;
+      if (current >= images.length) current = 0;
+      gradCurrent = current;
     }
+  } else {
+    return;
   }
+
+  imgEl.style.opacity = 0;
+  setTimeout(() => {
+    imgEl.src = images[current];
+    imgEl.alt = "Photo " + (current + 1);
+    imgEl.style.opacity = 1;
+  }, 250);
+}
+
 </script>
 </body>
 </html>
