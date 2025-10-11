@@ -221,35 +221,30 @@ const gradImages = [
 ];
 let gradCurrent = 0;
 
-function changeSlide(carouselId, offset) {
+  function changeSlide(carouselId, offset) {
   let images, current, imgEl;
+
   if (carouselId === "carousel1") {
     images = liveShowsImages;
-    current = liveShowsCurrent + offset;
-    if (current < 0) current = images.length - 1;
-    if (current >= images.length) current = 0;
-    liveShowsCurrent = current;
+    liveShowsCurrent += offset;
+    if (liveShowsCurrent < 0) liveShowsCurrent = images.length - 1;
+    if (liveShowsCurrent >= images.length) liveShowsCurrent = 0;
     imgEl = document.getElementById("carousel1-img");
+    current = liveShowsCurrent;
   } else if (carouselId === "carousel2") {
-    // To avoid conflicts, use a counter to track which carousel2
-    // The first 'carousel2' is for Cannine BTS, the second for Grad Photoshoot
-    // Use the currently displayed image's src to determine which array to use
+    images = cannineImages;
+    cannineCurrent += offset;
+    if (cannineCurrent < 0) cannineCurrent = images.length - 1;
+    if (cannineCurrent >= images.length) cannineCurrent = 0;
     imgEl = document.getElementById("carousel2-img");
-    // If filename matches any cannineImages, use cannine logic
-    if (cannineImages.includes(imgEl.src.split('/').pop())) {
-      images = cannineImages;
-      current = cannineCurrent + offset;
-      if (current < 0) current = images.length - 1;
-      if (current >= images.length) current = 0;
-      cannineCurrent = current;
-    } else {
-      // Otherwise use gradImages
-      images = gradImages;
-      current = gradCurrent + offset;
-      if (current < 0) current = images.length - 1;
-      if (current >= images.length) current = 0;
-      gradCurrent = current;
-    }
+    current = cannineCurrent;
+  } else if (carouselId === "carousel3") {
+    images = gradImages;
+    gradCurrent += offset;
+    if (gradCurrent < 0) gradCurrent = images.length - 1;
+    if (gradCurrent >= images.length) gradCurrent = 0;
+    imgEl = document.getElementById("carousel3-img");
+    current = gradCurrent;
   } else {
     return;
   }
