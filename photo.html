@@ -34,17 +34,17 @@
     .text-expand:hover {
       transform: scale(1.1);
     }
-   .carousel {
+    .carousel {
       position: relative;
       width: 400px;
-      margin: 0 auto;   /* Center horizontally */
+      margin: 0 auto;
       background: #fff;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.09);
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .carousel img {
       width: 100%;
@@ -74,14 +74,10 @@
     .arrow:hover {
       opacity: 1;
     }
-    .arrow.left { 
-    left: 10px; 
-    }
-    .arrow.right { 
-    right: 10px; 
-    }
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
     .boxed-text {
-      border: 2px solid #000000; 
+      border: 2px solid #000000;
       padding: 20px;
       margin: 20px auto;
       max-width: 700px;
@@ -151,12 +147,10 @@
       <button class="arrow right" onclick="changeSlide('carousel1', 1)">→</button>
     </div>
     <p class="boxed-text">
-      A collection of live music events I attended and attempted to shoot for from inside the crowd. Shot on iPhone and edited on Adobe Photoshop and Lightroom.
-      <br>
+      A collection of live music events I attended and attempted to shoot for from inside the crowd. Shot on iPhone and edited on Adobe Photoshop and Lightroom.<br>
       (ARTISTS INCLUDED: Luke Hemmings of 5SOS, Hayley Williams of Paramore, Lindsey Lomis, 5 Seconds of Summer)
     </p>
-  <br>
-  <br>
+    <br><br>
     <h1 class="text-expand">CANNINE (INTUITA FILMS) BTS</h1>
     <!-- Carousel for CANNINE BTS -->
     <div class="carousel" id="carousel2">
@@ -165,22 +159,20 @@
       <button class="arrow right" onclick="changeSlide('carousel2', 1)">→</button>
     </div>
     <p class="boxed-text">Behind-the-scenes content of 'Cannine', an indie film production by Intuita Films. Shot with a Canon EOS Rebel T7i/800D DSLR Camera. </p>
-  </div>
-
+    <br><br>
     <h1 class="text-expand">GRAD PHOTOSHOOT</h1>
-      <div class="carousel" id="carousel2">
-      <button class="arrow left" onclick="changeSlide('carousel2', -1)">←</button>
-      <img id="carousel2-img" src="group2.jpg" alt="Photo 1" />
-      <button class="arrow right" onclick="changeSlide('carousel2', 1)">→</button>
+    <!-- Carousel for Grad Photoshoot -->
+    <div class="carousel" id="carousel3">
+      <button class="arrow left" onclick="changeSlide('carousel3', -1)">←</button>
+      <img id="carousel3-img" src="group2.jpg" alt="Photo 1" />
+      <button class="arrow right" onclick="changeSlide('carousel3', 1)">→</button>
     </div>
     <p class="boxed-text">Makeshift photoshoot for recent 2025 college grads. First attempt at conducting and planning a shoot like this. Shot with a Canon EOS Rebel T7i/800D DSLR Camera and edited on Adobe Photoshop and Lightroom.</p>
   </div>
-  
 </main>
 <footer>
   <p>&copy; AVC 2025. All rights reserved.</p>
 </footer>
-  
 <script>
   const liveShowsImages = [
     "5SOSTMHLA.jpg",
@@ -194,34 +186,34 @@
   let liveShowsCurrent = 0;
 
   const cannineImages = [
-  "IMG_2954.JPG",
-  "IMG_3662(finshadow).jpeg",
-  "IMG_3644(colinDog).jpeg",
-  "IMG_3472.jpeg",
-  "IMG_2873(winnerSHOT).JPG",
-  "IMG_3721(prodTeam).jpeg",  
-];
+    "IMG_2954.JPG",
+    "IMG_3662(finshadow).jpeg",
+    "IMG_3644(colinDog).jpeg",
+    "IMG_3472.jpeg",
+    "IMG_2873(winnerSHOT).JPG",
+    "IMG_3721(prodTeam).jpeg"
+  ];
   let cannineCurrent = 0;
 
   const gradImages = [
-  "group2.jpg",
-  "group1.jpg",
-  "group3.jpg",
-  "uci4.jpg",
-  "uci1.jpg", 
-  "uci3.jpg"
-  "csulb1.jpg",
-  "csulb2.jpg",
-  "cnl3.jpg", 
-  "cnl4.jpg"
-  "cnl6.jpg"
-  "ucibeach.jpg"
-  "cnl1.jpg"
-];
+    "group2.jpg",
+    "group1.jpg",
+    "group3.jpg",
+    "uci4.jpg",
+    "uci1.jpg",
+    "uci3.jpg",
+    "csulb1.jpg",
+    "csulb2.jpg",
+    "cnl3.jpg",
+    "cnl4.jpg",
+    "cnl6.jpg",
+    "ucibeach.jpg",
+    "cnl1.jpg"
+  ];
   let gradCurrent = 0;
 
   function changeSlide(carouselId, offset) {
-    let images, current, imgEl;
+    let images, imgEl;
     if (carouselId === "carousel1") {
       images = liveShowsImages;
       liveShowsCurrent += offset;
@@ -234,7 +226,7 @@
         imgEl.alt = "Photo " + (liveShowsCurrent + 1);
         imgEl.style.opacity = 1;
       }, 250);
-      
+
     } else if (carouselId === "carousel2") {
       images = cannineImages;
       cannineCurrent += offset;
@@ -253,15 +245,16 @@
       gradCurrent += offset;
       if (gradCurrent < 0) gradCurrent = images.length - 1;
       if (gradCurrent >= images.length) gradCurrent = 0;
-      imgEl = document.getElementById("carousel2-img");
+      imgEl = document.getElementById("carousel3-img");
       imgEl.style.opacity = 0;
       setTimeout(() => {
         imgEl.src = images[gradCurrent];
         imgEl.alt = "Photo " + (gradCurrent + 1);
         imgEl.style.opacity = 1;
-      }, 250);  
+      }, 250);
     }
   }
 </script>
 </body>
 </html>
+
